@@ -4,11 +4,15 @@
         <h1> SIGN IN TO YOUR ACCOUNT </h1>
       <form @submit.prevent="login">
           <div class="mb-3">
-              <input type="text" v-model="username" placeholder="Username">
+              <input class="mb" type="text" v-model="username" placeholder="Username">
           </div>
           <div class="mb-3">     
-              <input type="password" v-model="password" placeholder="Password">
-          </div>    
+              <input class="mb" type="password" v-model="password" placeholder="Password">
+          </div>  
+          <div class="check">
+            <input type="checkbox" name="keep">
+            <label for="keep">Keep me signed in</label>  
+          </div>
           <button type="submit" class="btn">Login</button>
       </form>
   </div>

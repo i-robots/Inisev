@@ -1,12 +1,12 @@
 <template>
     <header>
-        <div><img src="https://www.google.com/search?q=logo&sxsrf=AOaemvLl_W5FuHuO_3nw_pzHCFWGIHsH3Q:1632566733233&tbm=isch&source=iu&ictx=1&fir=anzKS0A4Wzi6NM%252CxqICHFMKrhE4pM%252C_%253BC6mbfESS1zkCfM%252CEIqhu_9S4fuumM%252C_%253B-eDJED2XpumqjM%252CMUnsBNeVrAyn1M%252C_%253B2JTakzmYj7C1LM%252CKus-4YDXfn7roM%252C_%253B26gNWzgDRxqo6M%252CNThFvsymDBmxOM%252C_%253BCcv_RvEQQ41FEM%252CKus-4YDXfn7roM%252C_%253Bz20VsyMwKMnQJM%252CldkRqsCRrSjoyM%252C_%253BnL8CAgm83ZNLkM%252C4AAkN3JBEU6mOM%252C_%253BSnt_fV0oaRcAOM%252CqvQL6wird7ffAM%252C_%253B9GQEkn1VXF_Q_M%252C1UQ0uU1gb1rCxM%252C_%253BQCvogC48Oba-IM%252Cho91D9YnEeo1TM%252C_%253BH7dPFGVoi8q_AM%252CQf1mHEuQYVEMIM%252C_&vet=1&usg=AI4_-kS99MY-nc5YhTYHiKSq8-L-SDHqAA&sa=X&ved=2ahUKEwiT7dKB-ZnzAhVDOBoKHQKnD2AQ9QF6BAgOEAE#imgrc=-eDJED2XpumqjM">
-        <h1>{{ title }} </h1></div>
-        <div>
+       <h3>{{ title }} </h3>
+       <span class="item"><hr><h4>Menu Element</h4><hr></span>
+       <span class="item"> <hr><h4>Menu Element</h4><hr></span>
+       <span class="item"><hr><h4>Menu Element</h4><hr></span>
         <router-link to='/'>
-            <p>Log Out<p/>
+            <p> -] Admin</p>
         </router-link>
-        </div>
     </header>
 </template>
 
@@ -23,13 +23,32 @@ export default {
 <style scoped>
 header{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    width: 400px;
     align-items: center;
     color: #2c3e50;
 }
 
-h1,img{
+
+a{
+    color: black;
+    text-decoration: none;
+    position: fixed;
+    bottom: 0;   
+}
+
+h4{
+    margin: 0 30px 0 20px;
+}
+
+h3{
     float: left;
-    margin-left: 20px;
+    margin-left: 10px;
+}
+
+.item{
+    max-width: 80%;
+    margin-top: 20px;
+    cursor: pointer;
 }
 </style>

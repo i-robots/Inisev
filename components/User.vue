@@ -1,11 +1,12 @@
 <template>
-    <li class="client"  @click="$emit('see-client')">
-        <p>{{ client.first_name }} {{ client.last_name }} </p>
-        <img v-src="user.imgSrc"/>
-        <p>{{ user.first_name }} </p>
-        <p>{{ user.last_name }} </p>
-        <p>{{user.address}}</p>
-        <p>{{client.phone_no}}</p>
+    <li @click="$emit('see-user')">
+        <div class="wrapper">
+            <img :src="user.image"/>
+            <span class="desc">
+                <p>{{user.name}}</p>
+                <p>{{user.address.city}}</p>
+            </span>
+        </div>
     </li>
 </template>
 
@@ -17,3 +18,43 @@ export default{
     }
 }
 </script>
+
+<style scoped>
+img{
+    max-width: 150px;
+    border-radius: 0.6em;
+}
+
+.wrapper{
+    position: relative;
+}
+
+.desc{
+    text-align: center;
+    position: absolute;
+    margin-top: 40px;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    font-weight: bold;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+}
+
+.wrapper:hover .desc {
+  visibility: visible;
+  opacity: 1;
+}
+
+li{
+    list-style: none;
+    margin: 0 0 60px 60px;
+    cursor: pointer;
+}
+
+li:hover{
+    opacity: 0.8;
+}
+</style>

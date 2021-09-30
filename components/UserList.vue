@@ -1,8 +1,9 @@
 <template>
     <transition-group tag="ul" name="list">
-        <User @see-client="$emit('see-client',client._id)" 
-                @delete-item="$emit('delete-item',client._id)" :client="client" 
-                :key="client._id" v-for="client in listItems"/>
+        <User @see-user="$emit('see-user',user.id)" 
+                :user="user" 
+                :key="user.id" 
+                v-for="user in users"/>
     </transition-group>
 </template>
 
@@ -12,21 +13,21 @@ import User from './User'
 export default {
     name: 'List',
     props: {
-        listItems: Array
+        users: Array
     },
     components: {
         User
     },
-    emits: ['delete-item','see-client']
+    emits: ['see-user']
 }
 </script>
 <style scoped>
 ul{
-    width: fit-content;
-    margin-top: 15px; 
-    padding: 10px 10px;
-    border-radius: 0.2em;
-    background-image: linear-gradient(to right, #adb6bb,#dedad4);  
+    padding: 0;
+    margin: 0;
+}
+ul li{
+    display: inline-table;
 }
 
 .list-enter-from{

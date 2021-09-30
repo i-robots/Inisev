@@ -1,7 +1,7 @@
 .container{
     text-align: center;
     width:500px;
-    height:350px;
+    height:360px;
     border:1px solid #4973b1;
     padding-top:10px;
     background:#F5F7F9;
@@ -14,7 +14,7 @@
     margin-left: auto;
 }
 
-.container input{
+.mb{
     display: block;
     width: 90%;
     padding: .375rem .75rem;
@@ -31,10 +31,19 @@
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
+h1{
+    font-size: 1.8em;
+}
+
 button, input {
     margin: 0;
     font-family: 'Gill Sans' , sans-serif;
     overflow: visible;
+}
+
+.check{
+   text-align: left;
+   margin-top: 2rem;
 }
 
 button{
@@ -46,7 +55,7 @@ button{
     cursor: pointer;
     text-decoration: none;
     font-size: 1em;
-    margin-top: 3rem!important;
+    margin-top: 1rem!important;
     -webkit-appearance: none;
     -moz-appearance: none;
     background-image: linear-gradient(to right, #504186, #3b70ac);
