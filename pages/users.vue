@@ -13,6 +13,7 @@
 import Menu from '../components/Menu'
 import UserList from '../components/UserList'
 import Popup from '../components/Popup'
+import { getUsers } from "../firebase";
 
 export default{
     name: 'User',
@@ -30,18 +31,13 @@ export default{
         }
     },
     methods: {
-        async fetchusers(){
-            const res = await fetch('https://jsonblob.com/api/jsonBlob/891610589164748800')
-            const data = await res.json()
-            return data
-        },
         seeUser(id){
             this.user = this.users.find((c) => c.id == id)
             this.showUser = true
         }
     },
     async created(){
-        this.users = await this.fetchusers()
+        this.users = await getUsers()
     }
 }
 </script>

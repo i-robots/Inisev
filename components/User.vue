@@ -4,7 +4,7 @@
             <img :src="user.image"/>
             <span class="desc">
                 <p>{{user.name}}</p>
-                <p>{{user.address.city}}</p>
+                <p>{{user.address}}</p>
             </span>
         </div>
     </li>

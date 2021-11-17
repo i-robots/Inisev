@@ -7,9 +7,7 @@
                 <p>{{ user.name }} </p>
                 <p>{{ user.email }} </p>
                 <p>{{ user.phone }} </p>
-                <p>{{ user.address.city }} </p>
-                <p>{{ user.address.street }} </p>
-                <p>{{ user.website }} </p>
+                <p>{{ user.address }} </p>
             </div>
              <span @click="$emit('close')" class="close">&times;</span>
         </div>
